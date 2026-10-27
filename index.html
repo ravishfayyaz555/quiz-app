@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app">
+        <header class="header">
+            <div class="logo">✦ QuizMaster</div>
+            <div class="badge">Test Your Knowledge</div>
+        </header>
+
+        <main class="quiz-card" id="quizCard">
+            <div class="welcome-icon">🧠</div>
+            <p class="eyebrow">CHALLENGE YOURSELF</p>
+            <h1>Ready to test<br>your knowledge?</h1>
+            <p class="description">
+                Answer 5 interesting questions and see how much you know!
+            </p>
+
+            <div class="info">
+                <span>📝 5 Questions</span>
+                <span>⭐ Instant Results</span>
+            </div>
+
+            <button class="primary-btn" id="startBtn">
+                Start Quiz <span>→</span>
+            </button>
+        </main>
+
+        <section class="quiz-card hidden" id="questionScreen">
+            <div class="quiz-top">
+                <span id="questionNumber">Question 1 of 5</span>
+                <span class="score-label">Score: <b id="liveScore">0</b></span>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+
+            <p class="eyebrow">CHOOSE THE CORRECT ANSWER</p>
+            <h2 id="questionText"></h2>
+
+            <div id="optionsContainer" class="options"></div>
+
+            <p id="feedback" class="feedback" aria-live="polite"></p>
+
+            <button class="primary-btn" id="nextBtn" disabled>
+                Next Question <span>→</span>
+            </button>
+        </section>
+
+        <section class="quiz-card result-card hidden" id="resultScreen">
+            <div class="result-icon" id="resultIcon">🏆</div>
+            <p class="eyebrow">QUIZ COMPLETED</p>
+            <h1 id="resultTitle">Amazing Work!</h1>
+            <p class="description" id="resultMessage"></p>
+
+            <div class="score-circle">
+                <span id="finalScore">0/5</span>
+                <small>Your Score</small>
+            </div>
+
+            <button class="primary-btn" id="restartBtn">
+                Try Again ↻
+            </button>
+        </section>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
